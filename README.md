@@ -100,3 +100,10 @@ sudo a2dissite 000-default
 sudo service apache2 restart
 sudo service apache2 reload
 ````
+
+
+## Util
+* list services and ports
+````
+netstat -tln
+````
