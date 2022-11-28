@@ -76,7 +76,7 @@ resource "google_compute_router_nat" "my-router-nat" {
 
 module "webapp-wp" {
   source           = "./instance"
-  instance_name    = "backend-vm"
+  instance_name    = "webapp-wp"
   instance_zone    = "southamerica-east1-a"
   instance_network = google_compute_network.mynetwork.self_link
   instance_subnet  = google_compute_subnetwork.subnet-southamerica-east1.self_link
@@ -86,7 +86,7 @@ module "webapp-wp" {
 
 module "database-wp" {
   source           = "./instance"
-  instance_name    = "database-vm"
+  instance_name    = "database-wp"
   instance_zone    = "southamerica-east1-a"
   instance_network = google_compute_network.mynetwork.self_link
   instance_subnet  = google_compute_subnetwork.subnet-southamerica-east1.self_link
