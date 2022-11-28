@@ -50,6 +50,16 @@ resource "google_compute_subnetwork" "subnet-southamerica-east1" {
   network       = google_compute_network.mynetwork.id
 }
 
+resource "google_compute_router" "my-router" {
+  name    = "my-router"
+  region  = google_compute_subnetwork.subnet-southamerica-east1.region
+  network = google_compute_network.mynetwork.id
+
+  bgp {
+    asn = 64514
+  }
+}
+
 resource "google_compute_router_nat" "my-router-nat" {
   name                               = "my-router-nat"
   router                             = google_compute_router.my-router.name
