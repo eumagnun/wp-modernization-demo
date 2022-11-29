@@ -115,3 +115,7 @@ sudo service apache2 reload
 ````
 netstat -tln
 ````
+* MariaDB remote connections
+````
+https://mariadb.com/kb/en/configuring-mariadb-for-remote-client-access/
+````
