@@ -26,7 +26,7 @@ GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'demo123' WITH GRANT OPTIO
 FLUSH PRIVILEGES;
 ````
 
-*create user (replace IP by your server IP)
+*create user (replace user, password and the IP by your server IP)
 ````
 sudo mysql -u root -p
 CREATE DATABASE wordpress;
@@ -40,7 +40,15 @@ exit
 ````
 exit
 ````
-
+Now lets enable the external connection to MariaDb. Add the following lines to the file /etc/mysql/my.cnf
+````
+skip-networking=0
+skip-bind-address
+````
+Restart the service
+````
+sudo systemctl restart mariadb.service
+````
 ## 2 - Wordpress installation on app-wp VM
 ````
 sudo apt update
