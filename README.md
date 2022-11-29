@@ -33,7 +33,7 @@ exit
 ````
 exit
 ````
-Now lets enable the external connection to MariaDb. Add the following lines to the file /etc/mysql/my.cnf
+Now lets enable the external connection to MariaDb. Add the following lines at the end of file /etc/mysql/my.cnf
 ````
 skip-networking=0
 skip-bind-address
