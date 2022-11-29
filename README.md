@@ -19,13 +19,6 @@ sudo mysql_secure_installation
 ````
 sudo mariadb
 ````
-````
-GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'demo123' WITH GRANT OPTION;
-````
-````
-FLUSH PRIVILEGES;
-````
-
 *create user (replace user, password and the IP by your server IP)
 ````
 sudo mysql -u root -p
